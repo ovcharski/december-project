@@ -40,8 +40,11 @@ npx playwright --version
 ```
 **System requirements**
 Node.js 18+
+
 Windows 10+, Windows Server 2016+ or Windows Subsystem for Linux (WSL)
+
 macOS 13 Ventura, or later
+
 Debian 12, Ubuntu 22.04, Ubuntu 24.04, on x86-64 and arm64 architecture
 
 
@@ -50,7 +53,9 @@ Debian 12, Ubuntu 22.04, Ubuntu 24.04, on x86-64 and arm64 architecture
 The project uses the Page Object Model (POM) pattern. The page objects are defined in the pages directory. For example, the `OrganizePage` class is defined in `OrganizePage.ts`.
 
 Encapsulation - The Page Object encapsulates both actions and assertions related to the page.
+
 Reusability - reuse methods across different tests that require similar checks.
+
 Clarity - keeps  test code clean.
 
 Further improvement (skipping initializing the same objects over and over again) could be done using Playwright Fixtures. More information: [Documentation](https://playwright.dev/docs/test-fixtures), YouTube [Video 1](https://www.youtube.com/watch?v=k488kAtT-Pw), [Video 2](https://www.youtube.com/watch?v=rRmfYu8hlbw)
@@ -62,6 +67,8 @@ Test reports are generated in the `playwright-report` directory. Open `index.htm
 ## Known Issues
 
 Using Chromium 100% of the tests pass. Using Gecko ~5 of 29 tests fail. Probably timeout issues, should investigate.
+
+GitHub Actions fail due to timeout, should investigate.
 
 ## Improvements
 
