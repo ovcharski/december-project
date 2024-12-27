@@ -1,0 +1,141 @@
+{
+  "cookies": [
+    {
+      "name": "_gcl_au",
+      "value": "1.1.409193350.1735291176",
+      "domain": ".mobisystems.com",
+      "path": "/",
+      "expires": 1743067175,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_hjSessionUser_3223217",
+      "value": "eyJpZCI6ImRkN2M1NGZjLTBiZDAtNTZkOC05NDFmLTU4M2NmYWUxZGQxMiIsImNyZWF0ZWQiOjE3MzUyOTExNzU4MjYsImV4aXN0aW5nIjp0cnVlfQ==",
+      "domain": ".mobisystems.com",
+      "path": "/",
+      "expires": 1766827175,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_hjSession_3223217",
+      "value": "eyJpZCI6IjljNTQxMDU1LWZlMGItNDcxZC1iYTY2LWIwNzE1ZWQwZjY3OSIsImMiOjE3MzUyOTExNzU4MjcsInMiOjEsInIiOjEsInNiIjowLCJzciI6MCwic2UiOjAsImZzIjoxLCJzcCI6MH0=",
+      "domain": ".mobisystems.com",
+      "path": "/",
+      "expires": 1735292975,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_gid",
+      "value": "GA1.2.713389467.1735291176",
+      "domain": ".mobisystems.com",
+      "path": "/",
+      "expires": 1735377575,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga",
+      "value": "GA1.1.1364203089.1735291176",
+      "domain": ".mobisystems.com",
+      "path": "/",
+      "expires": 1769851175.974165,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "bcookie",
+      "value": "\"v=2&c838cee7-04b7-4f64-8678-37959dd4fe6e\"",
+      "domain": ".linkedin.com",
+      "path": "/",
+      "expires": 1766827177.055393,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "li_gc",
+      "value": "MTswOzE3MzUyOTExNzY7MjswMjHUJWMpLePDXVbAXcpbX90P8p+KeSCINYiiFe+jIHJMDQ==",
+      "domain": ".linkedin.com",
+      "path": "/",
+      "expires": 1750843177.055438,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "lidc",
+      "value": "\"b=TGST03:s=T:r=T:a=T:p=T:g=3400:u=1:x=1:i=1735291176:t=1735377576:v=2:sig=AQECAVbPJlqNJQ7yxSn59C5K1MmkCkfn\"",
+      "domain": ".linkedin.com",
+      "path": "/",
+      "expires": 1735377577.055453,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_fbp",
+      "value": "fb.1.1735291176064.65813200617952891",
+      "domain": ".mobisystems.com",
+      "path": "/",
+      "expires": 1743067176,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "FCCDCF",
+      "value": "%5Bnull%2Cnull%2Cnull%2C%5B%22CQKS0wAQKS0wAEsACBENBVFoAP_gAEPgACiQINJD7C7FbSFCwH5zaLsAMAhHRsAAQoQAAASBAmABQAKQIAQCgkAQFASgBAACAAAAICRBIQIECAAAAUAAQAAAAAAEAAAAAAAIIAAAgAEAAAAIAAACAIAAEAAIAAAAEAAAmAgAAIIACAAAgAAAAAAAAAAAAAAAAgCAAAAAAAAAAAAAAAAAAQOhSD2F2K2kKFkPCmwXYAYBCujYAAhQgAAAkCBMACgAUgQAgFJIAgCIFAAAAAAAAAQEiCQAAQABAAAIACgAAAAAAIAAAAAAAQQAABAAIAAAAAAAAEAQAAIAAQAAAAIAABEhCAAQQAEAAAAAAAQAAAAAAAAAAABAAA.diAACdgAAAA%22%2C%222~70.89.93.108.122.149.196.236.259.311.313.323.358.415.442.449.486.494.495.540.574.609.864.981.1029.1048.1051.1095.1097.1126.1205.1276.1301.1365.1415.1449.1514.1570.1577.1598.1651.1716.1735.1753.1765.1870.1878.1889.1958.1960.2072.2253.2299.2373.2415.2506.2526.2531.2568.2571.2575.2624.2677.2778~dv.%22%2C%228F2577F5-C36A-4741-8550-843ED49E63CA%22%5D%5D",
+      "domain": ".mobisystems.com",
+      "path": "/",
+      "expires": 1768987176,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_L3Q69YGES1",
+      "value": "GS1.1.1735291175.1.0.1735291176.0.0.0",
+      "domain": ".mobisystems.com",
+      "path": "/",
+      "expires": 1769851176.400446,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://test.mobisystems.com",
+      "localStorage": [
+        {
+          "name": "i18nextLng",
+          "value": "en"
+        },
+        {
+          "name": "google_auto_fc_cmp_setting",
+          "value": "[1]"
+        },
+        {
+          "name": "lastExternalReferrer",
+          "value": "empty"
+        },
+        {
+          "name": "hjActiveViewportIds",
+          "value": "[{\"id\":\"3ca8dd52-3d82-405b-baa3-5c669bae57d0\",\"expireTimestamp\":1735312776015}]"
+        },
+        {
+          "name": "lastExternalReferrerTime",
+          "value": "1735291176054"
+        }
+      ]
+    }
+  ]
+}
