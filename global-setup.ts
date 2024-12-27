@@ -3,7 +3,7 @@ import { Browser, chromium, expect, Page } from "@playwright/test";
 export const baseURL = 'https://test.mobisystems.com/mobipdf/online/organize'; 
 
 async function globalSetup() {
-    const browser: Browser = await chromium.launch({ headless: false });
+    const browser: Browser = await chromium.launch({ headless: true });
     const context = await browser.newContext();
     const page: Page = await context.newPage();
     await page.goto("https://test.mobisystems.com/mobipdf/online/organize");
