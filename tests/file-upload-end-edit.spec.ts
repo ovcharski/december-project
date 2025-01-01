@@ -18,7 +18,6 @@ test('Upload a File and Dublicate the pages', async ({ page }) => {
   await organizePage.finishButtonClick();
   await organizePage.startOverButtonClick();
   await expect(organizePage.dropzone()).toBeVisible();
-
 });
 
 test('Upload a File and use the mini icons to edit', async ({ page }) => {
@@ -40,10 +39,6 @@ test('Upload a File and use the mini icons to edit', async ({ page }) => {
   await organizePage.previewCloseIconClick();
   await organizePage.finishButtonClick();
 });
-
-
-
-
 
 test.beforeEach(async ({ page }) => {
   organizePage = new OrganizePage(page);

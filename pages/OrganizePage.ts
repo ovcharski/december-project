@@ -114,8 +114,6 @@ async miniCloseIconClick() {
     await this.page.getByAltText('close icon').click();
 }
 
-fff
-
 // Checkbox:    
 
 async checkboxCheck() {

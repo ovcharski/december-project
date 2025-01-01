@@ -70,8 +70,33 @@ Using Chromium 100% of the tests pass. Using Gecko ~5 of 29 tests fail. Probably
 
 GitHub Actions fail due to timeout, should investigate.
 
-## Improvements
+## Future Improvements
 
 More test regarding file manipulation after upload could be written.
 
 The file uploading in the tests rely on using [setInputFiles() method](https://playwright.dev/docs/input#upload-files). Drag and Drop upload probably can be tested too.
+
+Use private getters for commonly used locators.
+```sh
+private get toolbarWrapper(): Locator {
+    return this.page.getByTestId('toolbarWrapper');
+}
+```
+An example - every time you access `this.toolbarWrapper`, it returns a fresh locator, but you can use it like a property rather than calling a method.
+
+Using Interfaces - to define a contract for an object's shape. It specifies what properties and methods an object must have.
+```sh
+interface UploadOptions {
+    timeout?: number;
+    waitForUpload?: boolean;
+}
+
+async uploadFile(filePath: string, options: UploadOptions = {}) {
+    if (options.waitForUpload) {
+        await this.page.waitForLoadState('networkidle', { 
+            timeout: options.timeout ?? 30000 
+        });
+    }
+}
+```
+An example - an interface for upload options.
