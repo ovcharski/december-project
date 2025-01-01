@@ -15,7 +15,7 @@ test('Upload Invalid PDF File', async ({ page }) => {
   await expect(organizePage.unsupportedFileFormatText()).toBeVisible();
   await expect(organizePage.confirmButton()).toBeVisible();
   await expect(organizePage.windowsButton()).toBeVisible();
-  await organizePage.alertConfirmButton();
+  await organizePage.alertConfirmButtonClick();
   await expect(organizePage.alertImage()).toBeHidden();
 });
 
@@ -52,7 +52,7 @@ test('Upload Invalid PDF File and Download Windows app', async ({ page }) => {
 
   // Download file
   const waitForDownloadEvent = page.waitForEvent('download');
-  await organizePage.alertWindowsButton();
+  await organizePage.alertWindowsButtonClick();
   const download = await waitForDownloadEvent;
   const filePath = 'downloads/organize-windows-app.exe';
   await download.saveAs(filePath);
@@ -66,7 +66,7 @@ test('Upload Invalid PDF File and Download Windows app', async ({ page }) => {
 test.beforeEach(async ({ page }) => {
   organizePage = new OrganizePage(page);
   await page.goto(baseURL);
-  await organizePage.bannerCloseIcon();
+  await organizePage.bannerCloseIconClick();
 });
 
 test.afterEach(async ({ page }) => {

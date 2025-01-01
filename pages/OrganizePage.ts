@@ -9,19 +9,20 @@ constructor(page: Page) {
 
 // Cookie popup:
 
-async cookieConsentYes() {
+async cookieConsentYesClick() {
     await this.page.getByLabel('Consent', { exact: true }).click();
 }
 
-async bannerCloseIcon() {
+async bannerCloseIconClick() {
     await this.page.getByTestId('closeIcon').click();
 }
 
-async chooseFileButton() {
+async chooseFileButtonClick() {
     await this.page.getByTestId('open').click();
 }
 
 // Method to upload a single file
+
 async uploadFile(filePath: string) {
     await this.page.setInputFiles('input[type="file"]', filePath);
 }
@@ -34,35 +35,35 @@ async uploadMultipleFiles(filePaths: string[]) {
 
 // Ribbon buttons:
 
-async ribbonUndo() {
+async ribbonUndoClick() {
     await this.page.getByTestId('toolbarWrapper').locator('div').filter({ hasText: 'Undo' }).nth(1).click();
 }
 
-async ribbonRedo() {
+async ribbonRedoClick() {
     await this.page.getByTestId('toolbarWrapper').locator('div').filter({ hasText: 'Redo' }).nth(1).click();
 }
 
-async ribbonRotateLeft() {
+async ribbonRotateLeftClick() {
     await this.page.getByTestId('specializedTools').locator('div').filter({ hasText: 'RotateLeft' }).first().click();
 }
 
-async ribbonRotateRight() {
+async ribbonRotateRightClick() {
     await this.page.getByTestId('specializedTools').locator('div').filter({ hasText: 'RotateRight' }).first().click();
 }
 
-async ribbonDeletePage() {
+async ribbonDeletePageClick() {
     await this.page.getByTestId('specializedTools').locator('div').filter({ hasText: 'DeletePage' }).first().click();
 }
 
-async ribbonDuplicatePage() {
+async ribbonDuplicatePageClick() {
     await this.page.getByTestId('specializedTools').locator('div').filter({ hasText: 'DuplicatePage' }).first().click();
 }
 
-async ribbonPreviewPage() {
+async ribbonPreviewPageClick() {
     await this.page.getByTestId('specializedTools').locator('div').filter({ hasText: 'PreviewPage' }).first().click();
 }
 
-async ribbonSelectAll() {
+async ribbonSelectAllClick() {
     await this.page.getByTestId('specializedTools').locator('div').filter({ hasText: 'SelectAll' }).first().click();
 }
 
@@ -72,27 +73,91 @@ async ribbonIsSelectAllVisible(): Promise<boolean> {
     return true;
 }
 
+// Mini icons for editing:
+
+async miniIconsThumbnailClick() {
+    await this.page.locator('div').filter({ hasText: /^Rotate page leftRotate page rightDuplicate pagePreview pageDelete page1$/ }).locator('canvas').click({
+      position: {
+        x: 93,
+        y: 80
+      }
+    });
+  }
+
+async miniRotateLeftClick() {
+    await this.page.getByRole('img', { name: 'rotate_lefticon' }).click();
+}
+// alternative await page.locator('div:nth-child(2) > div > .p-1').first().click();
+
+
+async miniRotateRightClick() {
+    await this.page.getByRole('img', { name: 'rotate_righticon' }).click();
+}
+// alternative await page.locator('div:nth-child(3) > div > .p-1').first().click();
+
+async miniDuplicatePageClick() {
+    await this.page.getByRole('img', { name: 'duplicate_pageicon' }).click();
+}
+// alternative await page.locator('div:nth-child(4) > div > .p-1').first().click();
+
+async miniDeletePageClick() {
+    await this.page.getByRole('img', { name: 'delete_pageicon' }).click();
+}
+// alternative await page.locator('div:nth-child(5) > div > .p-1').first().click();
+
+async miniPreviewPageClick() {
+    await this.page.getByRole('img', { name: 'preview_pageicon' }).click();
+}
+// alternative await page.locator('div:nth-child(6) > div > .p-1').first().click();
+
+async miniCloseIconClick() {
+    await this.page.getByAltText('close icon').click();
+}
+
+fff
+
+// Checkbox:    
+
+async checkboxCheck() {
+    await this.page.getByRole('checkbox').check();
+}
+// alternative await page.locator('.p-1').first().click();
+
+async checkboxUncheck() {
+    await this.page.getByRole('checkbox').uncheck();
+}
+
+// Preview page:
+
+async previewCloseIconClick() {
+    await this.page.getByAltText('close icon').click();
+}
+
+async documentPageCanvasToBeVisible() {
+    await expect(this.page.getByTestId('documentPage').locator('canvas')).toBeVisible();
+}
+
 // After file edit
 
-async finishButton() {
+async finishButtonClick() {
     await this.page.getByTestId('finish').click();
 }
 
-async startOverButton() {
+async startOverButtonClick() {
     await this.page.getByTestId('closeButton').click();
 }
 
 // Invalid file format alert:
 
-async alertConfirmButton() {
+async alertConfirmButtonClick() {
     await this.page.getByTestId('confirmBtn').click();
 }
 
-async alertUnsupportedText() {
+async alertUnsupportedTextClick() {
     await this.page.getByText('Unsupported file format').click();
 }
 
-async alertWindowsButton() {
+async alertWindowsButtonClick() {
     await this.page.getByTestId('windowsButton').click();
 }
 

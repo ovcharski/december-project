@@ -27,7 +27,7 @@ test('Change language Refactored', async ({ page }) => {
 test.beforeEach(async ({ page }) => {
   organizePage = new OrganizePage(page);
   await page.goto(baseURL);
-  await organizePage.bannerCloseIcon();
+  await organizePage.bannerCloseIconClick();
 });
 
 test.afterEach(async ({ page }) => {
